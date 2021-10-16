@@ -1,0 +1,169 @@
+.class public final Lc/d/b/c/h/j/i7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lc/d/b/c/h/j/h7;
+
+
+# direct methods
+.method public constructor <init>(Lc/d/b/c/h/j/h7;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    sget-object v0, Lc/d/b/c/h/j/g8;->a:Ljava/nio/charset/Charset;
+
+    .line 2
+    iput-object p1, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    iput-object p0, p1, Lc/d/b/c/h/j/h7;->a:Lc/d/b/c/h/j/i7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(IF)V
+    .locals 1
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    .line 1
+    invoke-static {p2}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result p2
+
+    .line 2
+    invoke-virtual {v0, p1, p2}, Lc/d/b/c/h/j/h7;->g(II)V
+
+    return-void
+.end method
+
+.method public final b(ID)V
+    .locals 1
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    .line 1
+    invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide p2
+
+    .line 2
+    invoke-virtual {v0, p1, p2, p3}, Lc/d/b/c/h/j/h7;->i(IJ)V
+
+    return-void
+.end method
+
+.method public final c(II)V
+    .locals 2
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    add-int v1, p2, p2
+
+    shr-int/lit8 p2, p2, 0x1f
+
+    xor-int/2addr p2, v1
+
+    .line 1
+    invoke-virtual {v0, p1, p2}, Lc/d/b/c/h/j/h7;->f(II)V
+
+    return-void
+.end method
+
+.method public final d(IJ)V
+    .locals 4
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    add-long v1, p2, p2
+
+    const/16 v3, 0x3f
+
+    shr-long/2addr p2, v3
+
+    xor-long/2addr p2, v1
+
+    .line 1
+    invoke-virtual {v0, p1, p2, p3}, Lc/d/b/c/h/j/h7;->h(IJ)V
+
+    return-void
+.end method
+
+.method public final e(ILjava/lang/Object;Lc/d/b/c/h/j/l9;)V
+    .locals 3
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    .line 1
+    check-cast p2, Lc/d/b/c/h/j/b9;
+
+    check-cast v0, Lc/d/b/c/h/j/f7;
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/lit8 p1, p1, 0x2
+
+    .line 2
+    invoke-virtual {v0, p1}, Lc/d/b/c/h/j/f7;->o(I)V
+
+    .line 3
+    move-object p1, p2
+
+    check-cast p1, Lc/d/b/c/h/j/r6;
+
+    invoke-virtual {p1}, Lc/d/b/c/h/j/r6;->f()I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_0
+
+    .line 4
+    invoke-interface {p3, p1}, Lc/d/b/c/h/j/l9;->b(Ljava/lang/Object;)I
+
+    move-result v1
+
+    .line 5
+    invoke-virtual {p1, v1}, Lc/d/b/c/h/j/r6;->g(I)V
+
+    :cond_0
+    invoke-virtual {v0, v1}, Lc/d/b/c/h/j/f7;->o(I)V
+
+    iget-object p1, v0, Lc/d/b/c/h/j/h7;->a:Lc/d/b/c/h/j/i7;
+
+    .line 6
+    invoke-interface {p3, p2, p1}, Lc/d/b/c/h/j/l9;->g(Ljava/lang/Object;Lc/d/b/c/h/j/i7;)V
+
+    return-void
+.end method
+
+.method public final f(ILjava/lang/Object;Lc/d/b/c/h/j/l9;)V
+    .locals 2
+
+    iget-object v0, p0, Lc/d/b/c/h/j/i7;->a:Lc/d/b/c/h/j/h7;
+
+    .line 1
+    check-cast p2, Lc/d/b/c/h/j/b9;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, p1, v1}, Lc/d/b/c/h/j/h7;->d(II)V
+
+    iget-object v1, v0, Lc/d/b/c/h/j/h7;->a:Lc/d/b/c/h/j/i7;
+
+    .line 2
+    invoke-interface {p3, p2, v1}, Lc/d/b/c/h/j/l9;->g(Ljava/lang/Object;Lc/d/b/c/h/j/i7;)V
+
+    const/4 p2, 0x4
+
+    .line 3
+    invoke-virtual {v0, p1, p2}, Lc/d/b/c/h/j/h7;->d(II)V
+
+    return-void
+.end method

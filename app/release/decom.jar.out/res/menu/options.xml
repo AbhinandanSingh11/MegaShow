@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/dual_audio" android:id="@id/r_dual_audio" android:title="Request dual audio" />
+    <item android:icon="@drawable/caption_on" android:id="@id/r_subtitle" android:title="Request subtitles" />
+    <item android:icon="@drawable/bug" android:id="@id/r_link" android:title="Link not working" />
+</menu>

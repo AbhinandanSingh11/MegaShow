@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "371637804215",
+    "firebase_url": "https://mega-shows-nimus-default-rtdb.firebaseio.com",
+    "project_id": "mega-shows-nimus",
+    "storage_bucket": "mega-shows-nimus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371637804215:android:157be3511674675e8c0132",
+        "android_client_info": {
+          "package_name": "com.nimus.megashows"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371637804215-oqfhhqd2p32fv13s5r5a4ppmieoc4i4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nimus.megashows",
+            "certificate_hash": "55a962ea763718cda847999204ceaf17007459b5"
+          }
+        },
+        {
+          "client_id": "371637804215-m6qvv17bmespt8pftjbtoddh68arl4ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2qnAB0HzlMPhycqGCamgJ4f-qWZuD-U4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371637804215-m6qvv17bmespt8pftjbtoddh68arl4ff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

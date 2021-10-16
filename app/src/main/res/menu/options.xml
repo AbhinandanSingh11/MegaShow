@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/r_dual_audio"
+            android:icon="@drawable/dual_audio"
+            android:title="Request dual audio" />
+        <item
+            android:id="@+id/r_subtitle"
+            android:icon="@drawable/caption_on"
+            android:title="Request subtitles" />
+
+        <item
+            android:id="@+id/r_link"
+            android:icon="@drawable/bug"
+            android:title="Link not working" />
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer2.ui.PlayerView android:id="@id/player_view" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" app:controller_layout_id="@layout/custom_controller" app:fastforward_increment="10000" app:hide_on_touch="true" app:player_layout_id="@layout/exo_player_view" app:resize_mode="fit" app:rewind_increment="10000" app:show_timeout="5000" app:use_controller="true" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/parentAd" android:layout_width="300.0dip" android:layout_height="250.0dip" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/progess_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

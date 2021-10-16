@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" android:elevation="3.0dip" card_view:cardCornerRadius="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/parentLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imageListItemMovie" android:clickable="true" android:layout_width="200.0dip" android:layout_height="190.0dip" android:scaleType="fitXY" />
+        <TextView android:textColor="@color/album_title" android:gravity="center" android:id="@id/nameListItemMovie" android:paddingLeft="@dimen/album_title_padding" android:paddingTop="@dimen/album_title_padding" android:paddingRight="@dimen/album_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/imageListItemMovie" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

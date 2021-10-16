@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Connect">
+        <menu>
+            <item android:icon="@drawable/ic_phone_black_24dp" android:id="@id/nav_contact" android:title="Contact us" />
+        </menu>
+    </item>
+    <item android:title="Application">
+        <menu>
+            <item android:icon="@drawable/ic_share_black_24dp" android:id="@id/nav_share" android:title="@string/menu_share" />
+            <item android:icon="@drawable/ic_baseline_system_update_24" android:id="@id/nav_update" android:title="Update" />
+            <item android:icon="@drawable/ic_baseline_star_rate_24" android:id="@id/nav_review" android:title="Review" />
+            <item android:icon="@drawable/request" android:id="@id/nav_request" android:title="Request Movie / Web Series" />
+            <item android:icon="@drawable/bug" android:id="@id/nav_report" android:title="Report Bug / Broken Link" />
+            <item android:icon="@drawable/tutorial" android:id="@id/nav_tutorial" android:title="Tutorial" />
+        </menu>
+    </item>
+</menu>

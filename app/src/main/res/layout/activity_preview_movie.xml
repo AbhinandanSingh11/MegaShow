@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PreviewMovieActivity"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullScreenImageMovie"
+        android:scaleType="fitXY"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/TopRelativeLayout">
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:layout_marginTop="25dp"
+            android:focusable="true"
+            android:background="@drawable/bg_bg"
+            android:id="@+id/BackImageDesc"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/BackImageDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/BackImageDesc"
+            app:layout_constraintBottom_toBottomOf="@id/BackImageDesc"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="21sp"
+            android:id="@+id/previewMovieHeading"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/bottomLayoutDesc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/midConslayoutDesc"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/textViewAuthor"
+            android:text="Mega Shows"
+            android:textColor="@color/my_pink"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/textViewDate"
+            android:textColor="@color/grey_500"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewAuthor"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/textViewTitle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            android:text="Description"
+            android:id="@+id/textViewDescriptionTitle"
+            android:textColor="@color/grey_500"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/scrollMovieDesc"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescriptionTitle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                   android:id="@+id/textViewDescription"
+                    android:textColor="@color/grey_500"
+                    android:textSize="13sp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/ratingLayout"
+                    android:layout_below="@id/textViewDescription">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        app:lottie_url="https://assets8.lottiefiles.com/private_files/lf30_fww6nma3.json"
+                        app:lottie_autoPlay="true"
+                        android:scaleType="centerCrop"
+                        app:lottie_loop="true"
+                        android:id="@+id/category_image"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/co_author"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/co_author"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="0dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Report movie"
+            android:textColor="@color/my_pink"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/brokenMovieLink"
+            app:layout_constraintTop_toBottomOf="@id/scrollMovieDesc"
+            android:textStyle="bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayoutDesc"
+        app:layout_constraintTop_toBottomOf="@+id/midConslayoutDesc"
+        android:id="@+id/AdWithUsMovies"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:lottie_url="https://assets1.lottiefiles.com/packages/lf20_2n5tmcrg.json"
+                app:lottie_autoPlay="true"
+                android:id="@+id/lottieEpisode"
+                android:scaleType="fitCenter"
+                app:lottie_loop="true"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@id/lottieEpisode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Advertise your product/business here."
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click to know more."
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/bottomLayoutDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/textViewPrice"
+            android:textColor="@color/my_pink"
+            android:text="free"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Loading..."
+            android:id="@+id/ButtonView"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_diable"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ButtonView"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/play"
+            android:background="@drawable/bg_play_disabled"
+            android:padding="10dp"
+            android:id="@+id/stream"
+            android:clickable="false"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/shareMovieParent"
+            app:layout_constraintEnd_toStartOf="@id/stream"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_play_abled"
+                android:src="@drawable/share_white"
+                android:scaleType="centerInside"
+                android:id="@+id/imageShareMovie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressShareMovie"
+                app:layout_constraintTop_toTopOf="@id/imageShareMovie"
+                app:layout_constraintBottom_toBottomOf="@id/imageShareMovie"
+                app:layout_constraintStart_toStartOf="@id/imageShareMovie"
+                app:layout_constraintEnd_toEndOf="@id/imageShareMovie"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="330dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bottom_sheet"
+        android:id="@+id/bottomSheet"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Select Streaming Quality"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:id="@+id/bottomSheetHeading"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottomSheetHeading"
+            app:layout_constraintBottom_toTopOf="@id/doneBottomSheet"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:weightSum="2.0"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:layout_marginEnd="3dp"
+                android:longClickable="true"
+                android:id="@+id/option1"
+                android:background="@drawable/normal_bottom_sheet_option">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_kc81fjcs.json"
+                    app:lottie_autoPlay="true"
+                    android:scaleType="fitXY"
+                    app:lottie_loop="true"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="25dp"
+                    android:src="@drawable/ic_baseline_hd_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:layout_marginStart="3dp"
+                android:longClickable="true"
+                android:id="@+id/option2"
+                android:background="@drawable/normal_bottom_sheet_option">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_kc81fjcs.json"
+                    app:lottie_autoPlay="true"
+                    android:scaleType="fitXY"
+                    app:lottie_loop="true"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="25dp"
+                    android:src="@drawable/ic_baseline_sd_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/doneBottomSheet"
+            app:layout_constraintTop_toTopOf="@id/doneBottomSheet"
+            app:layout_constraintEnd_toStartOf="@id/doneBottomSheet"
+            android:text="close"
+            android:textAllCaps="false"
+            android:textColor="@color/my_pink"
+            android:layout_marginEnd="15dp"
+            android:textSize="15sp"
+            android:id="@+id/closeBottomSheet"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_diable"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:id="@+id/doneBottomSheet"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loader"
+        android:visibility="gone"
+        android:alpha="0.8"
+        android:background="@color/black">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_rawRes="@raw/loader"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            android:scaleType="fitCenter"
+            app:lottie_loop="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
