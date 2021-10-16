@@ -299,6 +299,7 @@ public class ExoPlayer extends AppCompatActivity implements Player.EventListener
 
 
 
+        // For multiple audio channels
         bt_audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
